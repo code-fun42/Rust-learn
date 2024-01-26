@@ -11,7 +11,7 @@ pub fn is_palindrome(s: &str) -> bool {
 	let mut left: usize = 0;
 	let mut right: usize = s.len() - 1;
 
-	while left <= right && left < chars.len() && right >= 0 {
+	while left <= right && left < chars.len() {
 		if !chars[left].is_alphabetic() {
 			left += 1;
 		}
@@ -22,7 +22,6 @@ pub fn is_palindrome(s: &str) -> bool {
 
 		if chars[left].to_ascii_lowercase() == chars[right].to_ascii_lowercase() {
 			if left == right || left + 1 == right || left == right - 1 {
-				println!("{left}, {right}");
 				return true;
 			}
 
