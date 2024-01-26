@@ -1,3 +1,7 @@
+mod str_tools;
+
 fn main() {
-   println!("Hello, world!");
+	let s:&str = "catstac";
+	let r = str_tools::palindrome::is_palindrome(s);
+	println!("{}", {r});
 }
